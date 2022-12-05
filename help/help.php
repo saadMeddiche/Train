@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staion</title>
-    <link rel="stylesheet" href="../Station/style.css">
+    <title>Dashboard</title>
 
-    <!-- Tailwind -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="../Dashboard/style.css">
 </head>
 
-<body class="mainBody">
+<body>
 
-    <!-- =====================SideBare In mobil===================== -->
-    <div class="navbar w-full">
+    <!-- =====================Side Bare Mobile===================== -->
+    <div class="navbar">
         <nav id="navbar" class="navbar flex items-center p-2 text-base font-normal text-gray-900  dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-center bg-black h-16 border-b-2">
 
 
@@ -116,12 +115,13 @@
                                     <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
                                 </a>
                             </li>
+
                             <li>
-                            <a href="../help/help.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-                                <iconify-icon icon="material-symbols:help-clinic-rounded" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
-                                <span class="ml-3">Help</span>
-                            </a>
-                        </li>
+                                <a href="../help/help.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                                    <iconify-icon icon="material-symbols:help-clinic-rounded" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
+                                    <span class="ml-3">Help</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </aside>
@@ -132,12 +132,14 @@
 
     </div>
 
-    <div class="flex  ">
+    <div class="flex">
+
+
         <!-- =====================Side Bare===================== -->
-        <div id="sidebar" class="sidebar ">
+        <div id="sidebar" class="sidebar">
             <aside class="sidebar w-64 h-screen sticky top-0 " aria-label="Sidebar">
-                <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800 h-screen">
-                    <ul class="space-y-6">
+                <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded bg-gray-800 h-screen">
+                    <ul class="space-y-5">
                         <li>
                             <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                                 <iconify-icon icon="material-symbols:account-circle" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
@@ -191,9 +193,6 @@
                         </li>
                         <li>
                             <a href="../Trips/trips.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path>
-                        </svg> -->
                                 <iconify-icon icon="icon-park-outline:round-trip" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                 <span class="flex-1 ml-3 whitespace-nowrap">Trips</span>
                             </a>
@@ -225,6 +224,7 @@
                                 <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
                             </a>
                         </li>
+
                         <li>
                             <a href="../help/help.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                                 <iconify-icon icon="material-symbols:help-clinic-rounded" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
@@ -241,161 +241,26 @@
             <table class="text-center border-separate border-spacing-2 border border-slate-500 w-full">
                 <thead>
                     <tr>
-                        <th class="border border-slate-600 ...">#</th>
-                        <th class="border border-slate-600 ...">Station</th>
-                        <th class="border border-slate-600 ...">City</th>
-                        <th class="border border-slate-600 ...">Action</th>
+                        <th class="border border-slate-600 ...">ShortKet</th>
+                        <th class="border border-slate-600 ...">What is do</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Indianapolis</td>
-                        <td class="border border-slate-700 ...">Oujda</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-
+                        <td class="border border-slate-700 ...">Shift + s</td>
+                        <td class="border border-slate-700 ...">For Stations</td>
                     </tr>
                     <tr>
-                        <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Columbus</td>
-                        <td class="border border-slate-700 ...">Taourirt</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-
-
+                        <td class="border border-slate-700 ...">Shift + t</td>
+                        <td class="border border-slate-700 ...">For Trains</td>
                     </tr>
                     <tr>
-                        <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
+                        <td class="border border-slate-700 ...">Shift + v</td>
+                        <td class="border border-slate-700 ...">For Trips</td>
                     </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">4</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">5</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">6</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">7</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">5</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">5</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">5</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">5</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">5</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">5</td>
-                        <td class="border border-slate-700 ...">Detroit</td>
-                        <td class="border border-slate-700 ...">CasaBlanca</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
+                    
                 </tbody>
-
                 <!-- The link from where i got this code -->
                 <!-- https://tailwindcomponents.com/component/cookie-banner-tailwind-css-alpine-js -->
                 <div x-data="{ open: true }" class="" id="popUp">
@@ -429,17 +294,9 @@
 
     </div>
 
-    <!-- Include the short cut of all modals -->
-    <?php 
-    include "../modals.php";
-    ?>
-
-
-
-
-
 </body>
 
+<!-- =====================Lien of scripts===================== -->
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn-tailwindcss.vercel.app/"></script>
@@ -452,12 +309,11 @@
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<script src="../Station/script.js"></script>
-
 <!-- For the pop up [ctrl+m]-->
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-<!-- ctrl + m -->
 <script src="../Users/script.js"></script>
+
+
 
 </html>

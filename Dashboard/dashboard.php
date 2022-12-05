@@ -115,6 +115,13 @@
                                     <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
                                 </a>
                             </li>
+
+                            <li>
+                                <a href="../help/help.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                                    <iconify-icon icon="material-symbols:help-clinic-rounded" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
+                                    <span class="ml-3">Help</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </aside>
@@ -217,6 +224,13 @@
                                 <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
                             </a>
                         </li>
+
+                        <li>
+                            <a href="../help/help.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                                <iconify-icon icon="material-symbols:help-clinic-rounded" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
+                                <span class="ml-3">Help</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </aside>
@@ -301,9 +315,42 @@
                 </a>
             </div>
         </div>
-        <!-- md:max-w-xl -->
+
 
     </div>
+
+    <!-- The link from where i got this code -->
+    <!-- https://tailwindcomponents.com/component/cookie-banner-tailwind-css-alpine-js -->
+    <div x-data="{ open: true }" class="" id="popUp">
+
+    </div>
+
+    <!-- Don't show again the pop up -->
+    <script>
+        if (window.localStorage.getItem('show') === "No") {
+            document.getElementById("popUp").innerHTML = "";
+        }
+
+        if (window.localStorage.getItem('show') != "No") {
+            document.getElementById("popUp").innerHTML = `
+                    <div x-show="open" class="max-w-screen-lg mx-auto fixed bg-white inset-x-5 p-5 bottom-40 rounded-lg drop-shadow-2xl flex flex-wrap md:flex-nowrap text-center md:text-left items-center justify-center md:justify-between">
+                        <div class="w-full"> <b class="text-indigo-600">Hint:</b> Go to <a class="text-indigo-600" href="../help/help.php"><b>Help</b></a> so you know the Shortcut Of Each Menu
+                        </div>
+                        <div class=" items-center flex-shrink-0">
+
+                            <button onclick="doNotShowAgain()" @click="open = false" class=" px-5 py-2 text-indigo-500 hover:text-indigo-900 ">Don't show again</button>
+
+                            <button @click="open = false" class="bg-indigo-500 px-5 py-2 text-white rounded-md hover:bg-indigo-700 focus:outline-none">Ok</button>
+                        </div>
+                    </div>
+                    `;
+        }
+    </script>
+
+    <!-- Include the short cut of all modals -->
+    <?php
+    include "../modals.php";
+    ?>
 
 </body>
 
@@ -317,6 +364,13 @@
 <!-- iconify -->
 <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- For the pop up [ctrl+m]-->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+<script src="../Users/script.js"></script>
 
 
 </html>
