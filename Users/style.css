@@ -1,21 +1,13 @@
-/* .mainBody{
-
-    background-color:#001848  ;
-}
-
-.Content{
-    background-color:  #2d00b1 ;
-
-} */
 
 .navbar{
     background-color: #1f2937 !important;
 }
 
-@media (max-width:600px){
+@media (max-width:815px){
     .sidebar{
         display:none;
     }
+
     .mainBody{
         display: grid;
         justify-items: center;
@@ -23,16 +15,8 @@
    
 }
 
-@media (min-width:601px){
+@media (min-width:816px){
     .navbar{
         display: none;
     }
-
-    
-
-   
-
-   
-
-    
 }

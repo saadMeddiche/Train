@@ -1,18 +1,10 @@
-/* .mainBody{
 
-    background-color:#001848  ;
-}
-
-.Content{
-    background-color:  #2d00b1 ;
-
-} */
 
 .navbar{
     background-color: #1f2937 !important;
 }
 
-@media (max-width:600px){
+@media (max-width:636px){
     .sidebar{
         display:none;
     }
@@ -23,7 +15,7 @@
    
 }
 
-@media (min-width:601px){
+@media (min-width:636px){
     .navbar{
         display: none;
     }

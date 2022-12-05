@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Staion</title>
+    <link rel="stylesheet" href="../Trips/style.css">
 
+    <!-- Tailwind -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
-    <link rel="stylesheet" href="../Tests/style.css">
 </head>
 
-<body>
+<body class="mainBody">
 
-    <div class="navbar">
+    <!-- =====================SideBare In mobil===================== -->
+    <div class="navbar w-full">
         <nav id="navbar" class="navbar flex items-center p-2 text-base font-normal text-gray-900  dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-center bg-black h-16 border-b-2">
 
 
@@ -55,7 +57,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <a href="../Dashboard/dashboard.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                     <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
                                         <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
@@ -72,14 +74,14 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <a href="../Train/train.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                     <iconify-icon icon="bx:train" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
 
                                     <span class="flex-1 ml-3 whitespace-nowrap">Trains</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <a href="../Trips/trips.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                     <!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path>
                         </svg> -->
@@ -88,7 +90,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <a href="../Tickets/tickets.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                     <iconify-icon icon="dashicons:tickets-alt" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                     <span class="flex-1 ml-3 whitespace-nowrap">Tickets</span>
                                 </a>
@@ -99,14 +101,14 @@
                         <ul class="pt-4 mt-4 space-y-6 border-t border-gray-200 dark:border-gray-700">
 
                             <li>
-                                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                                <a href="../Admins/admins.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                                     <iconify-icon icon="ic:baseline-admin-panel-settings" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                     <span class="ml-3">Admins</span>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <a href="../Users/users.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 
                                     <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
@@ -124,17 +126,12 @@
 
     </div>
 
-
-
-
-    <div class="flex">
-
-
+    <div class="flex  ">
         <!-- =====================Side Bare===================== -->
-        <div id="sidebar" class="sidebar">
+        <div id="sidebar" class="sidebar ">
             <aside class="sidebar w-64 h-screen sticky top-0 " aria-label="Sidebar">
                 <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800 h-screen">
-                    <ul class="space-y-5">
+                    <ul class="space-y-6">
                         <li>
                             <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                                 <iconify-icon icon="material-symbols:account-circle" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
@@ -163,7 +160,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="../Dashboard/dashboard.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
                                     <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
@@ -180,14 +177,14 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="../Train/train.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <iconify-icon icon="bx:train" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
 
                                 <span class="flex-1 ml-3 whitespace-nowrap">Trains</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="../Trips/trips.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path>
                         </svg> -->
@@ -196,7 +193,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="../Tickets/tickets.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <iconify-icon icon="dashicons:tickets-alt" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                 <span class="flex-1 ml-3 whitespace-nowrap">Tickets</span>
                             </a>
@@ -207,14 +204,14 @@
                     <ul class="pt-4 mt-4 space-y-6 border-t border-gray-200 dark:border-gray-700">
 
                         <li>
-                            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                            <a href="../Admins/admins.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                                 <iconify-icon icon="ic:baseline-admin-panel-settings" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                 <span class="ml-3">Admins</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="../Users/users.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 
                                 <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
@@ -227,114 +224,151 @@
             </aside>
         </div>
 
-        <!-- =====================Cards===================== -->
-        <div class="container mx-5 my-5 grid lg:grid-cols-2 gap-5 items-center" id="bla">
-            <div class="cards">
-                <a href="../Station/station.php" class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg" src="../img/train.jpg" alt=""> -->
-                    <div class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg mx-3" style="height: 120px; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url(../img/station.jpg);"></div>
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Stations</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Disponible : 120</p>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Indisponible : 20</p>
+        <!-- =====================Table of stations===================== -->
+        <div class="w-full ">
+            <table class="h-full text-center border-separate border-spacing-2 border border-slate-500 w-full">
+                <thead>
+                    <tr>
+                        <th class="border border-slate-600 ...">#</th>
+                        <th class="border border-slate-600 ...">Train-Id</th>
+                        <th class="border border-slate-700 ...">From</th>
+                        <th class="border border-slate-600 ...">To</th>
+                        <th class="border border-slate-600 ...">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-slate-700 ...">1</td>
+                        <td class="border border-slate-700 ...">A112</td>
+                        <td class="border border-slate-700 ...">Fes - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Asfi - 23:00<br>at: 12/12/2022</td>
 
+                        <td class="border border-slate-700 ">
+                            <div class="flex flex-wrap gap-2 py-2 justify-center">
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="border border-slate-700 ...">2</td>
+                        <td class="border border-slate-700 ...">A111</td>
+                        <td class="border border-slate-700 ...">Oujda - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Asfi - 23:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ">
+                            <div class="flex flex-wrap gap-2 py-2 justify-center">
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
+                            </div>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td class="border border-slate-700 ...">3</td>
+                        <td class="border border-slate-700 ...">A110</td>
+                        <td class="border border-slate-700 ...">Oujda - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Taourirt - 23:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ">
+                            <div class="flex flex-wrap gap-2 py-2 justify-center">
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+                <!-- The link from where i got this code -->
+                <!-- https://tailwindcomponents.com/component/cookie-banner-tailwind-css-alpine-js -->
+                <div x-data="{ open: true }" class="" id="popUp">
+
+                </div>
+                <!-- Don't show again the pop up -->
+                <script>
+                    if (window.localStorage.getItem('show') === "No") {
+                        document.getElementById("popUp").innerHTML = "";
+                    }
+
+                    if (window.localStorage.getItem('show') != "No") {
+                        document.getElementById("popUp").innerHTML = `
+                    <div x-show="open" class="max-w-screen-lg mx-auto fixed bg-white inset-x-5 p-5 bottom-40 rounded-lg drop-shadow-2xl flex flex-wrap md:flex-nowrap text-center md:text-left items-center justify-center md:justify-between">
+                        <div class="w-full"> <b class="text-indigo-600">Hint:</b> Press ctrl <b class="text-indigo-600">+</b> m to open Add Menu .
+                        </div>
+                        <div class=" items-center flex-shrink-0">
+
+                            <button onclick="doNotShowAgain()" @click="open = false" class=" px-5 py-2 text-indigo-500 hover:text-indigo-900 ">Don't show again</button>
+
+                            <button @click="open = false" class="bg-indigo-500 px-5 py-2 text-white rounded-md hover:bg-indigo-700 focus:outline-none">Ok</button>
+                        </div>
                     </div>
-                </a>
-            </div>
+                    `;
+                    }
+                </script>
+            </table>
 
-            <div class="cards">
-                <a href="#" class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg" src="../img/train.jpg" alt=""> -->
-                    <div class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg mx-3" style="height: 120px; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url(../img/train.jpg);"></div>
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Trains</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Disponible : 120</p>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Indisponible : 20</p>
-
-                    </div>
-                </a>
-            </div>
-
-            <div class="cards">
-                <a href="#" class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg" src="../img/train.jpg" alt=""> -->
-                    <div class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg mx-3" style="height: 120px; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url(../img/tickets.jpg);"></div>
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Tickets</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Disponible : 120</p>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Indisponible : 20</p>
-
-                    </div>
-                </a>
-            </div>
-
-            <div class="cards">
-                <a href="#" class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg" src="../img/train.jpg" alt=""> -->
-                    <div class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg mx-3" style="height: 120px; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url(../img/trip.jpg);"></div>
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Trips</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Disponible : 120</p>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Indisponible : 20</p>
-
-                    </div>
-                </a>
-            </div>
-
-            <div class="cards">
-                <a href="#" class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg" src="../img/train.jpg" alt=""> -->
-                    <div class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg mx-3" style="height: 120px; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url(../img/users.jpg);"></div>
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Users</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Disponible : 120</p>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Indisponible : 20</p>
-
-                    </div>
-                </a>
-            </div>
-            <div class="cards">
-                <a href="#" class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg" src="../img/train.jpg" alt=""> -->
-                    <div class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-40 md:rounded-none md:rounded-l-lg mx-3" style="height: 120px; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url(../img/admin.jpg);"></div>
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Admins</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Disponible : 120</p>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Indisponible : 20</p>
-
-                    </div>
-                </a>
-            </div>
         </div>
-        <!-- md:max-w-xl -->
 
     </div>
 
+    <!-- =====================Add Modal===================== -->
+    <!-- Modal toggle -->
+    <button id="ButtonOfAddModal" class="hidden block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="staticModal">
+        Toggle modal
+    </button>
+
+    <!-- Main modal -->
+    <div id="staticModal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+        <div class="relative w-full h-full max-w-2xl md:h-auto">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Static modal
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="staticModal">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-6 space-y-6">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        The European Union s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-toggle="staticModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
+                    <button data-modal-toggle="staticModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        document.addEventListener("keydown", e => {
+            if (e.key.toLocaleLowerCase() === "m" && e.ctrlKey) {
+                document.getElementById("ButtonOfAddModal").click();
+            }
+        });
+    </script>
+
+
+
+
+
 </body>
 
-<!-- <script>
-    function menu() {
-        var sidebar = document.getElementById("sidebar");
-        var cards = document.getElementById("bla");
-
-        if (sidebar.style.display === "none") {
-
-            sidebar.style.display = "block";
-            cards.style.display = "none";
-
-        } else {
-
-            sidebar.style.display = "none";
-            cards.style.display = "block";
-
-
-        }
-
-
-
-    }
-</script> -->
-<!-- =====================Lien of scripts===================== -->
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn-tailwindcss.vercel.app/"></script>
@@ -344,7 +378,15 @@
 <!-- iconify -->
 <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 
-<script src="../Tests/script.js"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- For the pop up [ctrl+m]-->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+<!-- ctrl + m -->
+<script src="../Users/script.js"></script>
+
 
 
 </html>
