@@ -15,11 +15,9 @@ class register extends DataBase
         }
 
         $stmt = null;
-
- 
-        
-
     }
+
+    
     protected function checkUser($name, $email)
     {
         $stmt = $this->connect()->prepare("SELECT name FROM `users` WHERE name=? OR email=? ;");
