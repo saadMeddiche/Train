@@ -88,7 +88,7 @@ class registerControle extends register
         return $result;
     }
 
-    public function confirmationOfSingnUp(){
+    public function confirmationOfSingnUp(){ 
 
         if($this->emptyInput()==false){
             header("Location:../Register/register.php?error=empty");

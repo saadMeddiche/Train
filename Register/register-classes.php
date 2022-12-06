@@ -3,12 +3,12 @@ class register extends DataBase
 {
     protected function setUser($name,$password, $email)
     {
-        $stmt = $this->connect()->prepare("INSERT INTO `users`(`name`, `email`, `password`, `rank`) VALUES (?,?,?,?)");
+        $stmt = $this->connect()->prepare("INSERT INTO `users`(`name`, `email`, `password`, `rank`) VALUES (?,?,?,?);");
 
         $haschPassWord = password_hash($password,PASSWORD_DEFAULT);
 
-        // If it is failed
-        if (!$stmt->execute(array($name,$haschPassWord, $email))) {
+        //If it is failed
+        if (!$stmt->execute(array($name, $email,$haschPassWord,'0'))) {
             $stmt = null;
             header("location:../Register/register.php");
             exit();
@@ -22,7 +22,7 @@ class register extends DataBase
     }
     protected function checkUser($name, $email)
     {
-        $stmt = $this->connect()->prepare("SELECT * FROM `users` WHERE name=? OR email=? ;");
+        $stmt = $this->connect()->prepare("SELECT name FROM `users` WHERE name=? OR email=? ;");
 
         // If it is failed
         if (!$stmt->execute(array($name, $email))) {

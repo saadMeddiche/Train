@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- =================Meta tags and links================= -->
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staion</title>
-    <link rel="stylesheet" href="../Users/style.css">
+    <link rel="stylesheet" href="../Trips/style.css">
 
     <!-- Tailwind -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
@@ -16,8 +14,8 @@
 
 <body class="mainBody">
 
-    <!-- =====================SideBare In mobile===================== -->
-    <div class="navbar w-full sticky top-0">
+    <!-- =====================SideBare In mobil===================== -->
+    <div class="navbar w-full">
         <nav id="navbar" class="navbar flex items-center p-2 text-base font-normal text-gray-900  dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-center bg-black h-16 border-b-2">
 
 
@@ -27,8 +25,8 @@
                 </ul>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown" class="hidden sidebar2 z-10 w-fit ">
-                <aside class="sidebar2  w-screen h-screen " aria-label="Sidebar" aria-labelledby="dropdownDefault">
+            <div id="dropdown" class="hidden sidebar2 z-10 w-fit">
+                <aside class="sidebar2  w-screen h-screen sticky top-0" aria-label="Sidebar" aria-labelledby="dropdownDefault">
                     <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800 h-screen">
                         <ul class="space-y-5">
                             <li>
@@ -85,8 +83,8 @@
                             <li>
                                 <a href="../Trips/trips.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                     <!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path>
-                            </svg> -->
+                            <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path>
+                        </svg> -->
                                     <iconify-icon icon="icon-park-outline:round-trip" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                     <span class="flex-1 ml-3 whitespace-nowrap">Trips</span>
                                 </a>
@@ -133,14 +131,12 @@
         </nav>
 
     </div>
-    <!-- end -->
 
     <div class="flex  ">
-
-        <!-- =====================SideBare In Descktop===================== -->
-        <div id="sidebar" class="sidebar">
-            <aside class="sidebar w-64 h-screen sticky top-0" aria-label="Sidebar">
-                <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800 h-full">
+        <!-- =====================Side Bare===================== -->
+        <div id="sidebar" class="sidebar ">
+            <aside class="sidebar w-64 h-screen sticky top-0 " aria-label="Sidebar">
+                <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800 h-screen">
                     <ul class="space-y-6">
                         <li>
                             <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
@@ -196,8 +192,8 @@
                         <li>
                             <a href="../Trips/trips.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path>
-                            </svg> -->
+                            <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path>
+                        </svg> -->
                                 <iconify-icon icon="icon-park-outline:round-trip" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                 <span class="flex-1 ml-3 whitespace-nowrap">Trips</span>
                             </a>
@@ -229,7 +225,6 @@
                                 <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
                             </a>
                         </li>
-
                         <li>
                             <a href="../help/help.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                                 <iconify-icon icon="material-symbols:help-clinic-rounded" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
@@ -240,44 +235,43 @@
                 </div>
             </aside>
         </div>
-        <!-- end -->
-
-
 
         <!-- =====================Table of stations===================== -->
-        <div class="w-full  ">
+        <div class="w-full ">
             <table class=" text-center border-separate border-spacing-2 border border-slate-500 w-full">
-                <thead class="">
+                <thead>
                     <tr>
                         <th class="border border-slate-600 ...">#</th>
-                        <th class="border border-slate-600 ...">Name</th>
-                        <th class="border border-slate-700 ...">Email</th>
-                        <th class="border border-slate-600 ...">Rank</th>
-                        <th class="border border-slate-600 ...">Actions</th>
+                        <th class="border border-slate-600 ...">Train-Id</th>
+                        <th class="border border-slate-700 ...">From</th>
+                        <th class="border border-slate-600 ...">To</th>
+                        <th class="border border-slate-600 ...">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Saad Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
+                        <td class="border border-slate-700 ...">A112</td>
+                        <td class="border border-slate-700 ...">Fes - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Asfi - 23:00<br>at: 12/12/2022</td>
 
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
 
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Anass Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
+                        <td class="border border-slate-700 ...">A111</td>
+                        <td class="border border-slate-700 ...">Oujda - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Asfi - 23:00<br>at: 12/12/2022</td>
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
 
@@ -285,37 +279,39 @@
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Soufiane Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">Admin</td>
+                        <td class="border border-slate-700 ...">A110</td>
+                        <td class="border border-slate-700 ...">Oujda - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Taourirt - 23:00<br>at: 12/12/2022</td>
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Demote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Saad Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
+                        <td class="border border-slate-700 ...">A112</td>
+                        <td class="border border-slate-700 ...">Fes - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Asfi - 23:00<br>at: 12/12/2022</td>
 
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
 
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Anass Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
+                        <td class="border border-slate-700 ...">A111</td>
+                        <td class="border border-slate-700 ...">Oujda - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Asfi - 23:00<br>at: 12/12/2022</td>
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
 
@@ -323,37 +319,39 @@
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Soufiane Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">Admin</td>
+                        <td class="border border-slate-700 ...">A110</td>
+                        <td class="border border-slate-700 ...">Oujda - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Taourirt - 23:00<br>at: 12/12/2022</td>
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Demote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Saad Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
+                        <td class="border border-slate-700 ...">A112</td>
+                        <td class="border border-slate-700 ...">Fes - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Asfi - 23:00<br>at: 12/12/2022</td>
 
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
 
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Anass Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
+                        <td class="border border-slate-700 ...">A111</td>
+                        <td class="border border-slate-700 ...">Oujda - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Asfi - 23:00<br>at: 12/12/2022</td>
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
 
@@ -361,37 +359,39 @@
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Soufiane Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">Admin</td>
+                        <td class="border border-slate-700 ...">A110</td>
+                        <td class="border border-slate-700 ...">Oujda - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Taourirt - 23:00<br>at: 12/12/2022</td>
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Demote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Saad Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
+                        <td class="border border-slate-700 ...">A112</td>
+                        <td class="border border-slate-700 ...">Fes - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Asfi - 23:00<br>at: 12/12/2022</td>
 
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
 
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Anass Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
+                        <td class="border border-slate-700 ...">A111</td>
+                        <td class="border border-slate-700 ...">Oujda - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Asfi - 23:00<br>at: 12/12/2022</td>
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
 
@@ -399,102 +399,24 @@
                     </tr>
                     <tr>
                         <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Soufiane Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">Admin</td>
+                        <td class="border border-slate-700 ...">A110</td>
+                        <td class="border border-slate-700 ...">Oujda - 22:00<br>at: 12/12/2022</td>
+                        <td class="border border-slate-700 ...">Taourirt - 23:00<br>at: 12/12/2022</td>
                         <td class="border border-slate-700 ">
                             <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Demote</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Saad Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
-
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
-                            </div>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Anass Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
-                            </div>
-                        </td>
-
-
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Soufiane Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">Admin</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Demote</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Saad Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
-
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
-                            </div>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Anass Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">User</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
-                            </div>
-                        </td>
-
-
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Soufiane Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                        <td class="border border-slate-700 ...">Admin</td>
-                        <td class="border border-slate-700 ">
-                            <div class="flex flex-wrap gap-2 py-2 justify-center">
-                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Promote</button>
-                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Demote</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
+                                <button type="button" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                             </div>
                         </td>
                     </tr>
 
                 </tbody>
 
-
                 <!-- The link from where i got this code -->
                 <!-- https://tailwindcomponents.com/component/cookie-banner-tailwind-css-alpine-js -->
                 <div x-data="{ open: true }" class="" id="popUp">
 
                 </div>
-
                 <!-- Don't show again the pop up -->
                 <script>
                     if (window.localStorage.getItem('show') === "No") {
@@ -503,53 +425,58 @@
 
                     if (window.localStorage.getItem('show') != "No") {
                         document.getElementById("popUp").innerHTML = `
-                        <div x-show="open" class="max-w-screen-lg mx-auto fixed bg-white inset-x-5 p-5 bottom-40 rounded-lg drop-shadow-2xl flex flex-wrap md:flex-nowrap text-center md:text-left items-center justify-center md:justify-between">
-                            <div class="w-full"> <b class="text-indigo-600">Hint:</b> Go to <a class="text-indigo-600" href="../help/help.php"><b>Help</b></a> so you know the Shortcut Of Each Menu
-                            </div>
-                            <div class=" items-center flex-shrink-0">
-
-                                <button onclick="doNotShowAgain()" @click="open = false" class=" px-5 py-2 text-indigo-500 hover:text-indigo-900 ">Don't show again</button>
-
-                                <button @click="open = false" class="bg-indigo-500 px-5 py-2 text-white rounded-md hover:bg-indigo-700 focus:outline-none">Ok</button>
-                            </div>
+                    <div x-show="open" class="max-w-screen-lg mx-auto fixed bg-white inset-x-5 p-5 bottom-40 rounded-lg drop-shadow-2xl flex flex-wrap md:flex-nowrap text-center md:text-left items-center justify-center md:justify-between">
+                        <div class="w-full"> <b class="text-indigo-600">Hint:</b> Go to <a class="text-indigo-600" href="../help/help.php"><b>Help</b></a> so you know the Shortcut Of Each Menu
                         </div>
-                        `;
+                        <div class=" items-center flex-shrink-0">
+
+                            <button onclick="doNotShowAgain()" @click="open = false" class=" px-5 py-2 text-indigo-500 hover:text-indigo-900 ">Don't show again</button>
+
+                            <button @click="open = false" class="bg-indigo-500 px-5 py-2 text-white rounded-md hover:bg-indigo-700 focus:outline-none">Ok</button>
+                        </div>
+                    </div>
+                    `;
                     }
                 </script>
-
             </table>
 
         </div>
-        <!-- end -->
 
     </div>
-
 
     <!-- Include the short cut of all modals -->
     <?php
     include "../modals.php";
     ?>
 
+
+
+
+
+
+
 </body>
 
-<!-- ===========Tailwind=========== -->
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn-tailwindcss.vercel.app/"></script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
-<!-- End  -->
 
-<!-- ===========iconify=========== -->
+<!-- iconify -->
 <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-<!-- End  -->
 
-<!-- ===========jQuery=========== -->
+<!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <!-- For the pop up [ctrl+m]-->
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
+<!-- ctrl + m -->
 <script src="../Users/script.js"></script>
+
+
+
 
 
 </html>
