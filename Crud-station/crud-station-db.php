@@ -1,11 +1,12 @@
 <?php
+session_start();
 //If the save button of station modal has been pressed
 if (isset($_POST["addBtnStation"])) {
 
     $station = $_POST["nameOfStation"];
     $city = $_POST["cityWhereTheStationExist"];
 
-    include "../connection.php";
+    include "../config/db.php";
     include "../Crud-station/crud-station-controle-classes.php";
 
     $newStation = new crudStationConfigue();
@@ -16,14 +17,14 @@ if (isset($_POST["addBtnStation"])) {
     //go back to the previous page
     //https://stackoverflow.com/questions/5285031/back-to-previous-page-with-header-location-in-php
     // header("location:javascript://history.go(-1);");
-    header("location:../Station/station.php");
+    header("location:" . $_SESSION["URLNNOW"]);
 }
 
 if (isset($_POST["deleteBtnStation"])) {
 
     $id = $_POST["idOfStation"];
 
-    include "../connection.php";
+    include "../config/db.php";
     include "../Crud-station/crud-station-controle-classes.php";
 
     $delete = new crudStationConfigue();
@@ -39,7 +40,7 @@ if (isset($_POST["updateBtnStation"])) {
     $station = $_POST["nameOfStation"];
     $city = $_POST["cityOfStation"];
 
-    include "../connection.php";
+    include "../config/db.php";
     include "../Crud-station/crud-station-controle-classes.php";
 
     $update = new crudStationConfigue();
@@ -49,5 +50,4 @@ if (isset($_POST["updateBtnStation"])) {
     $update->update();
 
     header("location:../Station/station.php");
-
 }

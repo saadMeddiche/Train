@@ -1,8 +1,17 @@
-<?php 
-include "../connection.php";
+<?php
+session_start();
+$_SESSION["URLNNOW"] = $_SERVER['REQUEST_URI'];
+
+include "../CRUDTRAIN/CrudTrain.php";
 include "../Crud-station/crud-station-controle-classes.php";
+
+
 $data = new crudStationConfigue();
-$all = $data->fetchAll();
+$all = $data->fetchAllTables();
+
+$fetch2 = new cities();
+//call the method that will fetch all the citie from ville table , so we can use it select
+$allCities2 = $fetch2->fetchCities();
 ?>
 
 <!DOCTYPE html>
@@ -46,13 +55,15 @@ $all = $data->fetchAll();
                                 </button>
                                 <ul id="dropdown-example2" class="py-2 space-y-2">
                                     <li>
-                                        <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <a href="../Account/account.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <iconify-icon icon="material-symbols:switch-account" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                             <span class="flex-1 ml-3 whitespace-nowrap">Account</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                                        <a href="../logout.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
                                             <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path>
                                             </svg>
@@ -156,13 +167,14 @@ $all = $data->fetchAll();
                             </button>
                             <ul id="dropdown-example" class="py-2 space-y-2">
                                 <li>
-                                    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <a href="../Account/account.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                         <iconify-icon icon="material-symbols:switch-account" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                         <span class="flex-1 ml-3 whitespace-nowrap">Account</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                                    <a href="../logout.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                         <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path>
                                         </svg>
@@ -258,32 +270,49 @@ $all = $data->fetchAll();
                 </thead>
                 <tbody>
                     <?php
-                   
-                    foreach($all as $key => $val) {
+                    foreach ($all as $val) {
                         echo '
                         <form action="../Crud-station/crud-station-db.php" method="post">
                             <tr>
-                                <input type="hidden" name="idOfStation" value="'. $val["id"].'">
+                                <input type="hidden" name="idOfStation" value="' . $val["id_station"] . '">
                                 
 
-                                <td class="border border-slate-700 ...">'. $val["id"].'</td>
-                                <td class="border border-slate-700 ..."><input class ="text-center border-none p-0 w-full" name="nameOfStation" type="text" value="'. $val["station"].'"></td>
-                                <td class="border border-slate-700 ..."><input class ="text-center border-none p-0 w-full" name="cityOfStation" type="text" value="'. $val["city"].'"></td>
+                                <td class="border border-slate-700 ...">' . $val["id_station"] . '</td>
+                                <td class="border border-slate-700 ..."><input class ="text-center border-none p-0 w-full" name="nameOfStation" type="text" value="' . $val["name"] . '"></td>
+                                <td class="border border-slate-700 ...">
+                                <select id="" name="cityOfStation" placeholder="City ..." class="text-center border-none p-0 w-full" required>
+                                <option selected value="' . $val["id"] . '">' . $val["ville"] . '</option>'; ?>
+
+
+                    <?php
+
+                        foreach ($allCities2 as $v) {
+                            echo "<option value='{$v["id"]}'>{$v["ville"]}</option>";
+                        }
+
+
+                        echo '
+                                </select>
+                                </td>
+                                
+
+                                
+                                
                                 <td class="border border-slate-700 ">
                                     <div class="flex flex-wrap gap-2 py-2 justify-center">
                                             <button type="submit" name="updateBtnStation" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                                            <button type="submit" name="deleteBtnStation" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
+                                            <button type="submit" name="deleteBtnStation" class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
                                     </div>
                                 </td>
                             </tr>
-                        </form>';
+                        </form> ';
                     };
-                    
+
                     ?>
-                    
-                    
-                    
-        
+
+
+
+
                 </tbody>
 
                 <!-- The link from where i got this code -->
@@ -349,5 +378,17 @@ $all = $data->fetchAll();
 
 <!-- ctrl + m -->
 <script src="../Users/script.js"></script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(function() {
+        $("#from").select2();
+        $("#to").select2();
+    });
+</script>
 
 </html>

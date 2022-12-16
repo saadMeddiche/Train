@@ -1,3 +1,11 @@
+<?php
+session_start();
+$_SESSION["URLNNOW"] = $_SERVER['REQUEST_URI'];
+
+include "../CRUDTRAIN/CrudTrain.php";
+include "../Crud-station/crud-station-controle-classes.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,13 +46,15 @@
                                 </button>
                                 <ul id="dropdown-example2" class="py-2 space-y-2">
                                     <li>
-                                        <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <a href="../Account/account.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <iconify-icon icon="material-symbols:switch-account" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                             <span class="flex-1 ml-3 whitespace-nowrap">Account</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                                        <a href="../logout.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
                                             <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path>
                                             </svg>
@@ -136,10 +146,10 @@
 
 
         <!-- =====================Side Bare===================== -->
-        <div id="sidebar" class="sidebar">
+        <div id="sidebar" class="sidebar ">
             <aside class="sidebar w-64 h-screen sticky top-0 " aria-label="Sidebar">
-                <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded bg-gray-800 h-screen">
-                    <ul class="space-y-5">
+                <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800 h-screen">
+                    <ul class="space-y-6">
                         <li>
                             <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                                 <iconify-icon icon="material-symbols:account-circle" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
@@ -150,7 +160,7 @@
                             </button>
                             <ul id="dropdown-example" class="py-2 space-y-2">
                                 <li>
-                                    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <a href="../Account/account.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                         <iconify-icon icon="material-symbols:switch-account" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                         <span class="flex-1 ml-3 whitespace-nowrap">Account</span>
                                     </a>
@@ -193,6 +203,9 @@
                         </li>
                         <li>
                             <a href="../Trips/trips.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <!-- <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path>
+                            </svg> -->
                                 <iconify-icon icon="icon-park-outline:round-trip" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                 <span class="flex-1 ml-3 whitespace-nowrap">Trips</span>
                             </a>
@@ -224,7 +237,6 @@
                                 <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
                             </a>
                         </li>
-
                         <li>
                             <a href="../help/help.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                                 <iconify-icon icon="material-symbols:help-clinic-rounded" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
@@ -243,7 +255,6 @@
                     <tr>
                         <th class="border border-slate-600 ...">ShortKet</th>
                         <th class="border border-slate-600 ...">What is do</th>
-                        
                     </tr>
                 </thead>
                 <tbody>
@@ -259,7 +270,6 @@
                         <td class="border border-slate-700 ...">Shift + v</td>
                         <td class="border border-slate-700 ...">For Trips</td>
                     </tr>
-                    
                 </tbody>
                 <!-- The link from where i got this code -->
                 <!-- https://tailwindcomponents.com/component/cookie-banner-tailwind-css-alpine-js -->
@@ -294,6 +304,10 @@
 
     </div>
 
+    <!-- Include the short cut of all modals -->
+    <?php
+    include "../modals.php";
+    ?>
 </body>
 
 <!-- =====================Lien of scripts===================== -->
@@ -314,6 +328,14 @@
 
 <script src="../Users/script.js"></script>
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(function() {
+        $("#from").select2();
+        $("#to").select2();
+    });
+</script>
 
 </html>

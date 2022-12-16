@@ -1,3 +1,17 @@
+<?php
+session_start();
+$_SESSION["URLNNOW"] = $_SERVER['REQUEST_URI'];
+
+include "../CRUDTRAIN/CrudTrain.php";
+include "../Crud-station/crud-station-controle-classes.php";
+
+include "../Classes/fetchusers.php";
+
+
+$user = new users();
+$data = $user->fetchAdmins();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,13 +53,15 @@
                                 </button>
                                 <ul id="dropdown-example2" class="py-2 space-y-2">
                                     <li>
-                                        <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <a href="../Account/account.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <iconify-icon icon="material-symbols:switch-account" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                             <span class="flex-1 ml-3 whitespace-nowrap">Account</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                                        <a href="../logout.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
                                             <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path>
                                             </svg>
@@ -118,11 +134,11 @@
                             </li>
 
                             <li>
-                            <a href="../help/help.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-                                <iconify-icon icon="material-symbols:help-clinic-rounded" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
-                                <span class="ml-3">Help</span>
-                            </a>
-                        </li>
+                                <a href="../help/help.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                                    <iconify-icon icon="material-symbols:help-clinic-rounded" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
+                                    <span class="ml-3">Help</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </aside>
@@ -149,13 +165,15 @@
                             </button>
                             <ul id="dropdown-example" class="py-2 space-y-2">
                                 <li>
-                                    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <a href="../Account/account.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                         <iconify-icon icon="material-symbols:switch-account" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
                                         <span class="flex-1 ml-3 whitespace-nowrap">Account</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                                    <a href="../logout.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
                                         <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path>
                                         </svg>
@@ -226,12 +244,18 @@
                                 <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="../help/help.php" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                                <iconify-icon icon="material-symbols:help-clinic-rounded" style="color: #9ca3af;" width="25" height="25"></iconify-icon>
+                                <span class="ml-3">Help</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </aside>
         </div>
 
-        <!-- =====================Table of stations===================== -->
+        <!-- =====================Table of Admins===================== -->
         <div class="w-full ">
             <table class=" text-center border-separate border-spacing-2 border border-slate-500 w-full">
                 <thead>
@@ -242,77 +266,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Saad Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Anass Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Soufian Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">4</td>
-                        <td class="border border-slate-700 ...">Meriam Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Saad Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Anass Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Soufian Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">4</td>
-                        <td class="border border-slate-700 ...">Meriam Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Saad Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Anass Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Soufian Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">1</td>
-                        <td class="border border-slate-700 ...">Saad Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">2</td>
-                        <td class="border border-slate-700 ...">Anass Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-slate-700 ...">3</td>
-                        <td class="border border-slate-700 ...">Soufian Meddiche</td>
-                        <td class="border border-slate-700 ...">saadmeddiche2004201@gmail.com</td>
-                    </tr>
+                    <?php
+                    foreach ($data as $row) {
+                    ?>
+                        <tr>
+                            <td class="border border-slate-700 ..."><?php echo $row["id"] ?></td>
+                            <td class="border border-slate-700 ..."><?php echo $row["name"] ?></td>
+                            <td class="border border-slate-700 ..."><?php echo $row["email"] ?></td>
+                        </tr>
 
+                    <?php } ?>
                 </tbody>
 
                 <!-- The link from where i got this code -->
@@ -378,6 +341,14 @@
 
 <script src="../Users/script.js"></script>
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(function() {
+        $("#from").select2();
+        $("#to").select2();
+    });
+</script>
 
 </html>
